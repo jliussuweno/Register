@@ -21,16 +21,21 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Jlius Suweno/Register'
+  s.homepage         = 'https://github.com/jliussuweno/Register'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jlius Suweno' => 'jliuss@live.com' }
-  s.source           = { :git => 'https://github.com/Jlius Suweno/Register.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jliussuweno/Register.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'Register/Classes/**/*'
+  s.ios.deployment_target = '14.2'
+  
+  s.source_files = 'Register/Module/**/*.{h,m}'
+  s.resources = 'Register/Module/**/*.{xcassets,json,storyboard,xib,xcdatamodeld}'
+  
+  s.resource_bundles = {
+    'Register' => ['Register/Module/**/*.{xcassets,json,storyboard,xib,xcdatamodeld}']
+  }
   
   # s.resource_bundles = {
   #   'Register' => ['Register/Assets/*.png']
